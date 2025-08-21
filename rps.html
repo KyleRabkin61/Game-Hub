@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="rps.css">
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="sidebarActive">
+        <label for="sidebarActive" class="open-sidebar-button">
+            <img src="img/menu.svg" alt="">
+        </label>
+
+        <label id="overlay" for="sidebarActive"></label>
+        <div class="links-container">
+            <label for="sidebarActive" class="close-sidebar-button">
+                <img src="img/close.svg" alt="">
+            </label>
+
+            <a class="home-link" href="index.html">Game Hub</a>
+            <a href="rps.html">RPS</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="title">Rock Paper Scissors</h1>
+        <div class="play-row">
+            <button class="play" id="playButton" onclick="playGame()">Play</button>
+            <div class="scoreboard" id="scoreboard">
+                <div class="player-counter" id="playerCounter">
+                    <h1 id="playerCounterText">Player Score: 0</h1>
+                </div>
+                <div class="round-counter" id="roundCounter">
+                    <h1 id="roundText">Round: 1</h1>
+                </div>
+                <div class="comp-counter" id="compCounter">
+                    <h1 id="compCounterText">Computer Score: 0</h1>
+                </div>
+            </div>
+        </div>
+        <div class="game" id="game">
+            <div class="player-choice-section" id="playerChoiceSection">
+                <h1 class="weapon">Choose Your Weapon</h1>
+                <div class="player-choice-row">
+                    <button class="player-choice" onclick="playRock()">
+                        <img src="rps-img/rock.png" id="rock" alt="">
+                    </button>
+                    <button class="player-choice" onclick="playPaper()">
+                        <img src="rps-img/paper.png" id="paper" alt="">
+                    </button>
+                    <button class="player-choice" onclick="playScissors()">
+                        <img src="rps-img/scissors.png" id="scissors" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="computer-choice-row" id="computerChoiceRow">
+                <h1 class="computer-choice-text">Computer Choice</h1>
+                <img src="" id="compChoiceImg" class="compImg" alt="">
+            </div>
+            <div class="lock-in-section">
+                <button class="lock-in" id="lockIn" onclick="lockIn()">Lock In</button>
+                <h1 class="result" id="result"></h1>
+                <h1 class="end-result" id="endResult"></h1>
+                <button class="play-again" id="playAgain" onclick="reset()">Play Again</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="rps.js"></script>
+</body>
+
+</html>
