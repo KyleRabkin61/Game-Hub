@@ -93,6 +93,7 @@ function lockIn() {
     }
 
     let compChoice = computerChoice();
+    document.getElementById('compChoiceImg').style.opacity = 1;
     document.getElementById('compChoiceImg').src = `rps-img/${compChoice.toLowerCase()}.png`;
 
     let winMsgs = [
@@ -121,7 +122,7 @@ function lockIn() {
 
         document.getElementById('result').innerHTML = winMsgs[randomNumMsg];
         playerScore++;
-        document.getElementById('playerCounterText').textContent = `Player Score: ${playerScore}`;
+        document.getElementById('playerCounterText').innerHTML = `Player Score:<br>${playerScore}`;
         round++;
         document.getElementById('roundText').textContent = `Round: ${round}`;
 
@@ -131,7 +132,7 @@ function lockIn() {
 
         document.getElementById('result').innerHTML = loseMsgs[randomNumMsg];
         compScore++;
-        document.getElementById('compCounterText').textContent = `Computer Score: ${compScore}`;
+        document.getElementById('compCounterText').innerHTML = `Computer Score:<br>${compScore}`;
         round++;
         document.getElementById('roundText').textContent = `Round: ${round}`;
 
@@ -171,10 +172,10 @@ function endGame() {
 function reset() {
     playerScore = 0;
     compScore = 0;
-    round = 0;
+    round = 1;
 
-    document.getElementById('playerCounterText').textContent = `Player Score: ${playerScore}`;
-    document.getElementById('compCounterText').textContent = `Computer Score: ${compScore}`;
+    document.getElementById('playerCounterText').innerHTML = `Player Score:<br>${playerScore}`;
+    document.getElementById('compCounterText').innerHTML = `Computer Score:<br>${compScore}`;
     document.getElementById('roundText').textContent = `Round: ${round}`;
 
     document.getElementById('playerChoiceSection').style.display = "flex";
@@ -183,5 +184,6 @@ function reset() {
     document.getElementById('playAgain').style.display = "none";
 
     document.getElementById('endResult').textContent = "";
-    document.getElementById('compChoiceImg').src = "";image
+    document.getElementById('compChoiceImg').style.opacity = 0;
+    document.getElementById('compChoiceImg').src = "rps-img/rock.png";image
 }

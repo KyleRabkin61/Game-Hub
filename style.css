@@ -55,6 +55,10 @@ label img {
     height: 50px;
 }
 
+label img:hover {
+    cursor: pointer;
+}
+
 #sidebarActive {
     display: none;
 }

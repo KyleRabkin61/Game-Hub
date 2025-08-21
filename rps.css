@@ -27,7 +27,7 @@
 
 .title {
     text-align: center;
-    font-size: 4rem;
+    font-size: clamp(1.5rem, 3vw, 4rem);
     color: #3a4454;
 }
 
@@ -44,7 +44,7 @@
 .play-again,
 .lock-in {
     padding: 0.5rem;
-    width: 125px;
+    width: 5rem;
     height: fit-content;
     font-size: 30px;
     background: #6b4e71;
@@ -64,20 +64,46 @@
 
 .play-again {
     display: none;
+    width: 7rem;
 }
 
 .scoreboard {
     display: none;
-    gap: clamp(2rem, 4vw, 5rem);
     font-weight: 400;
+    border: #3a4454 5px solid;
+}
+
+.player-counter,
+.round-counter,
+.comp-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    width: 33.3%;
+}
+
+.player-counter {
+    background: #6b4e71;
+    color: #f5dddd;
+}
+
+.round-counter {
+    background: #C2B2B4;
+    color: #6b4e71;
+
+}
+
+.comp-counter {
+    background: #6b4e71;
+    color: #f5dddd;
 }
 
 .player-counter h1,
 .round-counter h1,
 .comp-counter h1 {
     text-align: center;
-    font-size: clamp(1.2rem, 3vw, 2rem);
-    color: #3a4454;
+    font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
 .game {
@@ -87,6 +113,7 @@
     height: auto;
     flex-wrap: wrap;
     width: 100%;
+    margin: 2rem 0;
 }
 
 .player-choice-section {
@@ -104,22 +131,23 @@
 .weapon {
     text-align: center;
     color: #3a4454;
+    font-size: clamp(1.2rem, 3vw, 2rem);
 }
 
 .player-choice-row {
     display: flex;
-    flex-direction: column;
 }
 
 .player-choice {
     padding: 0.5rem;
     width: 25vw;
+    min-width: 5rem;
     background: none;
     border: none;
 }
 
 .player-choice img {
-    width: clamp(5rem, 2vw, 7rem);
+    width: clamp(4rem, 2vw, 6rem);
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 1));
     transition: 0.25s;
 }
@@ -142,12 +170,18 @@
     flex: 0 0 auto;
     width: 100%;
     padding: 0.8rem;
+}
+
+.computer-choice-text {
     color: #f5dddd;
+    text-align: center;
+    font-size: clamp(1.2rem, 3vw, 2rem);
 }
 
 .compImg {
-    width: clamp(200px, 25vw, 300px);
+    width: clamp(6rem, 20vw, 10rem);
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 1));
+    opacity: 0;
 }
 
 .lock-in-section {
@@ -160,12 +194,15 @@
 .result {
     text-align: center;
     color: #3a4454;
+    font-size: clamp(1.5rem, 3vw, 4rem);
 }
 
 .end-result {
     margin: 2rem 0;
     color: #3a4454;
+    font-size: clamp(1.8rem, 3vw, 4rem);
     font-weight: 800;
+    text-align: center;
 }
 
 @media screen and (min-width: 578px) {
@@ -175,7 +212,7 @@
     }
 
     .player-choice {
-        width: clamp(9rem, 12vw, 10rem);
+        width: clamp(7rem, 12vw, 9rem);
     }
 }
 
