@@ -33,6 +33,8 @@ function playRock() {
     });
 
     document.getElementById('rock').classList.add('active-choice');
+
+    document.getElementById('weapon').textContent = 'You chose Rock.';
 }
 
 function playPaper() {
@@ -45,6 +47,8 @@ function playPaper() {
     });
 
     document.getElementById('paper').classList.add('active-choice');
+
+    document.getElementById('weapon').textContent = 'You chose Paper.';
 }
 
 function playScissors() {
@@ -57,6 +61,8 @@ function playScissors() {
     });
 
     document.getElementById('scissors').classList.add('active-choice');
+
+    document.getElementById('weapon').textContent = 'You chose Scissors.';
 }
 
 function computerChoice() {
@@ -142,6 +148,8 @@ function lockIn() {
         document.getElementById('roundText').textContent = `Round: ${round}`;
     }
 
+    document.getElementById('weapon').textContent = 'Choose Your Weapon.';
+
     endGame();
 
     // reset choices
@@ -180,6 +188,7 @@ function reset() {
 
     document.getElementById('playerChoiceSection').style.display = "flex";
     document.getElementById('computerChoiceRow').style.display = "flex";
+    document.getElementById('weapon').textContent = 'Choose Your Weapon.';
     document.getElementById('lockIn').style.display = "block";
     document.getElementById('playAgain').style.display = "none";
 
