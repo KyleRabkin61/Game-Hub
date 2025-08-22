@@ -106,7 +106,7 @@ label img:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height:auto;
+    height: auto;
     min-height: 100dvh;
 }
 
@@ -116,7 +116,7 @@ label img:hover {
     font-size: 5rem;
 }
 
-.play{
+.play {
     padding: 0.5rem;
     width: auto;
     height: fit-content;
@@ -129,22 +129,22 @@ label img:hover {
     margin: 1rem;
 }
 
-.play:hover{
+.play:hover {
     cursor: pointer;
     transform: scale(1.1);
 }
 
 .wordle-grid {
     display: none;
-    grid-template-rows: clamp(3.3rem, 8vw, 5rem) clamp(3.3rem, 8vw, 5rem) clamp(3.3rem, 8vw, 5rem) clamp(3.3rem, 8vw, 5rem) clamp(3.3rem, 8vw, 5rem) clamp(3.3rem, 8vw, 5rem);
-    grid-template-columns: clamp(3.3rem, 8vw, 5rem) clamp(3.3rem, 8vw, 5rem) clamp(3.3rem, 8vw, 5rem) clamp(3.3rem, 8vw, 5rem) clamp(3.3rem, 8vw, 5rem);
+    grid-template-rows: clamp(3.3rem, 8vw, 4rem) clamp(3.3rem, 8vw, 4rem) clamp(3.3rem, 8vw, 4rem) clamp(3.3rem, 8vw, 4rem) clamp(3.3rem, 8vw, 4rem) clamp(3.3rem, 8vw, 4rem);
+    grid-template-columns: clamp(3.3rem, 8vw, 4rem) clamp(3.3rem, 8vw, 4rem) clamp(3.3rem, 8vw, 4rem) clamp(3.3rem, 8vw, 4rem) clamp(3.3rem, 8vw, 4rem);
     gap: 0.25rem 0.15rem;
 }
 
 .tile {
     border: 2px solid lightgray;
-    width: clamp(3.3rem, 8vw, 5rem);
-    height: clamp(3.3rem, 8vw, 5rem);
+    width: clamp(3.3rem, 8vw, 4rem);
+    height: clamp(3.3rem, 8vw, 4rem);
     background: white;
     color: black;
     font-size: 2rem;
@@ -159,19 +159,21 @@ label img:hover {
 }
 
 .correct {
-    background: #6AAA64;
+    background: #6AAA64 !important;
     color: white;
     border-color: white;
 }
 
 .present {
-    background: #c9b458;
+    background: #c9b458 !important;
     color: white;
     border-color: white;
 }
 
 .absent {
-    background: #787c7e;
+    background: #787c7e !important;
+    color: white;
+    border-color: white;
 }
 
 @keyframes wiggle {
@@ -184,8 +186,38 @@ label img:hover {
     }
 }
 
+@keyframes notValid {
+    16.6666666667% {
+        transform: translate(5px, 0);
+    }
+
+    33.3333333333% {
+        transform: translate(-5px, 0);
+    }
+
+    50% {
+        transform: translate(5px, 0);
+    }
+
+    66.6666666666% {
+        transform: translate(-5px, 0);
+    }
+
+    83.3333333334% {
+        transform: translate(5px, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
 .wiggle {
     animation: wiggle 0.1s ease;
+}
+
+.not-valid {
+    animation: notValid 0.5s ease;
 }
 
 @keyframes flip {
@@ -240,14 +272,14 @@ label img:hover {
 
     50% {
         transform: rotateX(90deg);
-        background: #6AAA64;
+        background: #6AAA64 !important;
         color: white;
         border-color: white;
     }
 
     100% {
         transform: rotateX(0);
-        background: #6AAA64;
+        background: #6AAA64 !important;
         color: white;
         border-color: white;
     }
@@ -271,4 +303,53 @@ label img:hover {
 
 #answer {
     margin-top: 50px;
+}
+
+.keyboard-div {
+    display: none;
+    margin: 2rem 0;
+}
+
+.keyboard-row {
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.key-tile {
+    border: 1px solid lightgray;
+    width: 36px;
+    height: 40px;
+    margin: 1px;
+    background: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.enter-key-tile {
+    border: 1px solid lightgray;
+    width: 76px;
+    height: 40px;
+    margin: 1px;
+    background: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.key-tile:hover,
+.enter-key-tile:hover {
+    cursor: pointer;
+}
+
+.key-tile:active,
+.enter-key-tile:active {
+    transform: scale(0.95);
 }
