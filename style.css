@@ -118,17 +118,25 @@ label img:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
+}
+
+.text {
+    justify-content: center;
+    padding: 1rem;
 }
 
 .title {
     text-align: center;
-    padding: 2rem;
     color: #1f363d;
 }
 
+.text p {
+    text-align: center;
+}
+
 .games {
-    width: 70vw;
+    width: auto;
     height: auto;
     display: grid;
     grid-template-rows: auto;
@@ -213,4 +221,11 @@ label img:hover {
     background: url(wordle-game.png);
     background-size: cover;
     background-position: center center;
+}
+
+.tictacttoe {
+    background: url(tictactoe-game.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }

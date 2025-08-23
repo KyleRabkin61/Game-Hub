@@ -302,12 +302,11 @@ label img:hover {
 }
 
 #answer {
-    margin-top: 50px;
+    margin: 25px auto;
 }
 
 .keyboard-div {
     display: none;
-    margin: 2rem 0;
 }
 
 .keyboard-row {
@@ -320,7 +319,7 @@ label img:hover {
 
 .key-tile {
     border: 1px solid lightgray;
-    width: 36px;
+    width: 35px;
     height: 40px;
     margin: 1px;
     background: white;

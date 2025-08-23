@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wordle</title>
+    <title>Tic Tac Toe</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="wordle.css">
+    <link rel="stylesheet" href="tictactoe.css">
 </head>
 
 <body>
@@ -30,18 +30,16 @@
             <a href="tictactoe.html">Tic Tac Toe</a>
         </div>
     </nav>
+
     <div class="container">
-        <h1 class="title" id="title">Wordle</h1>
+        <h1 class="title">Tic Tac Toe</h1>
         <button class="play" id="playButton" onclick="playGame()">Play</button>
-        <div class="wordle-grid" id="wordleGrid">
-        </div>
-        <h1 class="answer" id="answer"></h1>
-        <div class="keyboard-div" id="keyboardDiv"></div>
+        <div class="board" id="board"></div>
+        <h1 class="winner" id="winner"></h1>
+         <button class="play-again" id="playAgain" onclick="playAgain()">Play Again</button>
     </div>
 
-    <script src="wordle.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="tictacttoe.js"></script>
 </body>
 
 </html>
